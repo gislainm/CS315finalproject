@@ -6,7 +6,7 @@ const productsArr = [
         category: "Books",
         quantity: 3,
         image: "<img class='card-img-top' src='./photos/sapiens.jpeg' alt='Card image cap'>",
-        rating: 5,
+        rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
         price: "$18.49"
     },
     {
@@ -14,7 +14,7 @@ const productsArr = [
         category: "Books",
         quantity: 2,
         image: "<img class='card-img-top' src='./photos/storyGenius.jpg' alt='Card image cap'>",
-        rating: 4,
+        rating: "<img src='./photos/rating4.png' alt='Card image cap'>",
         price: "$13.79"
     },
     {
@@ -22,15 +22,15 @@ const productsArr = [
         category: "Books",
         quantity: 4,
         image: "<img class='card-img-top' src='./photos/aBriefHistory.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating: "<img src='./photos/rating4prime.png' alt='Card image cap'>",
         price: "$15.44"
     },
     {
         name: "The Shining Mass Market Paperback – June 26, 2012",
         category: "Books",
-        quantity: 5,
+        quantity: "<img src='./photos/rating5.png' alt='Card image cap'>",
         image: "<img class='card-img-top' src='./photos/theShining.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
         price: "$11.49"
     },
     {
@@ -38,7 +38,7 @@ const productsArr = [
         category: "Books",
         quantity: 10,
         image: "<img class='card-img-top' src='./photos/dube.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
         price: "$20.79"
     },
     {
@@ -46,7 +46,7 @@ const productsArr = [
         category: "Electronics",
         quantity: 15,
         image: "<img class='card-img-top' src='./photos/soundCore.jpg' alt='Card image cap'>",
-        rating: 4,
+        rating: "<img src='./photos/rating4.png' alt='Card image cap'>",
         price: "$154.79"
     },
     {
@@ -54,7 +54,7 @@ const productsArr = [
         category: "Electronics",
         quantity: 8,
         image: "<img class='card-img-top' src='./photos/beats.jpg' alt='Card image cap'>",
-        rating: 4,
+        rating: "<img src='./photos/rating4prime.png' alt='Card image cap'>",
         price: "$259.79"
     },
     {
@@ -62,7 +62,7 @@ const productsArr = [
         category: "Electronics",
         quantity: 7,
         image: "<img class='card-img-top' src='./photos/airpods.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
         price: "$200.79"
     },
     {
@@ -70,7 +70,7 @@ const productsArr = [
         category: "Electronics",
         quantity: 20,
         image: "<img class='card-img-top' src='./photos/iphone.jpg' alt='Card image cap'>",
-        rating: 4,
+        rating: "<img src='./photos/rating4.png' alt='Card image cap'>",
         price: "$697.79"
     },
     {
@@ -78,7 +78,7 @@ const productsArr = [
         category: "Electronics",
         quantity: 30,
         image: "<img class='card-img-top' src='./photos/tv.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
         price: "$435.79"
     },
     {
@@ -86,7 +86,7 @@ const productsArr = [
         category: "Home Decor",
         quantity: 23,
         image: "<img class='card-img-top' src='./photos/home1.jpg' alt='Card image cap'>",
-        rating: 4,
+        rating: "<img src='./photos/rating4prime.png' alt='Card image cap'>",
         price: "$240.79"
     },
     {
@@ -94,7 +94,7 @@ const productsArr = [
         category: "Home Decor",
         quantity: 13,
         image: "<img class='card-img-top' src='./photos/home2.jpg' alt='Card image cap'>",
-        rating: 3,
+        rating: "<img src='./photos/rating3.png' alt='Card image cap'>",
         price: "$40.79"
     },
     {
@@ -102,7 +102,7 @@ const productsArr = [
         category: "Home Decor",
         quantity: 33,
         image: "<img class='card-img-top' src='./photos/home3.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
         price: "$140.79"
     },
     {
@@ -110,9 +110,49 @@ const productsArr = [
         category: "Home Decor",
         quantity: 13,
         image: "<img class='card-img-top' src='./photos/home5.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
         price: "$59.79"
-    }
+    },
+    {
+        name: "Champion Men's Everyday Cotton Jogger",
+        category: "Clothing",
+        quantity: 20,
+        image: "<img class='card-img-top' src='./photos/clothes1.jpg' alt='Card image cap'>",
+        rating: "<img src='./photos/rating4prime.png' alt='Card image cap'>",
+        price: "$17.90"
+    },
+    {
+        name: "Evercute Cross Back Sport Bras Padded Strappy Criss Cross Cropped Bras for Yoga Workout Fitness Low Impact ",
+        category: "Clothing",
+        quantity: 30,
+        image: "<img class='card-img-top' src='./photos/clothes2.jpg' alt='Card image cap'>",
+        rating: "<img src='./photos/rating4prime.png' alt='Card image cap'>",
+        price: "$25.99 - $39.99"
+    },
+    {
+        name: "Newborn Infant Baby Girl Clothes Romper Floral Pant Outfits Set Cotton Baby Girls' Clothing",
+        category: "Clothing",
+        quantity: 40,
+        image: "<img class='card-img-top' src='./photos/clothes3.jpg' alt='Card image cap'>",
+        rating: "<img src='./photos/rating4.png' alt='Card image cap'>",
+        price: "$15.99 - $19.99"
+    },
+    {
+        name: "YOUNGCHARM 4 Pack Leggings with Pockets for Women,High Waist Tummy Control Workout Yoga Pants",
+        category: "Clothing",
+        quantity: 45,
+        image: "<img class='card-img-top' src='./photos/clothes4.jpg' alt='Card image cap'>",
+        rating: "<img src='./photos/rating3.png' alt='Card image cap'>",
+        price: "$40.79"
+    },
+    {
+        name: "BURT'S BEES BABY - Reversible Blanket, Nursery, Stroller & Tummy-Time Organic Jersey Cotton Quilted Infant & Toddler ",
+        category: "Clothing",
+        quantity: 35,
+        image: "<img class='card-img-top' src='./photos/clothes5.jpg' alt='Card image cap'>",
+        rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
+        price: "$19.95"
+    },
 ]
 window.onload = function () {
     let productsList = document.getElementsByClassName("myflex")[0];
@@ -121,7 +161,7 @@ window.onload = function () {
         let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
             "<div class='card-body'>" +
             "<h5 class='card-title'>" + element.category + "</h5>" +
-            "<p class='card-text'>" + element.name + "</p>" +
+            "<p class='card-text'>" + element.name + "</p>" + element.rating +
             "<p><b>" + element.price + "</b></p>" +
             "</div>" +
             "</div>";
