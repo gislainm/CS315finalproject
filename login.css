@@ -1,6 +1,6 @@
 .wrapper {
     border: solid 2px #e9ecef;
-    width: 30%;
+    width: 20%;
     border-top: 0px;
     margin-top: 0px;
 }
@@ -14,7 +14,7 @@
 
 .upborder {
     border-bottom: solid orange 8px;
-    width: 30%;
+    width: 20%;
     margin-top: 0px;
     display: flex;
     justify-content: center;
@@ -75,7 +75,7 @@ img {
 
 .wrapper2 {
     border: solid 2px rgb(237, 174, 57);
-    width: 30%;
+    width: 20%;
 }
 
 h5 {
