@@ -80,6 +80,38 @@ const productsArr = [
         image: "<img class='card-img-top' src='./photos/tv.jpg' alt='Card image cap'>",
         rating: 5,
         price: "$435.79"
+    },
+    {
+        name: "Christopher Knight Home Idalia Dining Chairs, 2-Pcs Set, Mint / Walnut Finish",
+        category: "Home Decor",
+        quantity: 23,
+        image: "<img class='card-img-top' src='./photos/home1.jpg' alt='Card image cap'>",
+        rating: 4,
+        price: "$240.79"
+    },
+    {
+        name: "Der Rose 3 Pack Mini Potted Fake Plants Artificial Plastic Eucalyptus Plants for Home Office Desk Room Decoration",
+        category: "Home Decor",
+        quantity: 13,
+        image: "<img class='card-img-top' src='./photos/home2.jpg' alt='Card image cap'>",
+        rating: 3,
+        price: "$40.79"
+    },
+    {
+        name: "Lush Decor Curtains Dolores Darkening Window Panel Set for Living, Dining Room, Bedroom (Pair), 84 in x 52 in, Yellow, 2 Count",
+        category: "Home Decor",
+        quantity: 33,
+        image: "<img class='card-img-top' src='./photos/home3.jpg' alt='Card image cap'>",
+        rating: 5,
+        price: "$140.79"
+    },
+    {
+        name: "Stonebriar SB-5393C 2PC Wire METAL CLOCHE SET, Set of 2, Brown",
+        category: "Home Decor",
+        quantity: 13,
+        image: "<img class='card-img-top' src='./photos/home5.jpg' alt='Card image cap'>",
+        rating: 5,
+        price: "$59.79"
     }
 ]
 window.onload = function () {
