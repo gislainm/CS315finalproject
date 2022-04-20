@@ -40,4 +40,45 @@ const productsArr = [{
     image: "<img src='./photos/dube.jpg'/>",
     rating: 5,
     price: "$20.79"
-}]
+},
+{
+    name: "Soundcore by Anker Life Q30 Hybrid Active Noise Cancelling Headphones with Multiple Modes, Hi-Res Sound, Custom EQ via App, 40H Playtime, Comfortable Fit, Bluetooth Headphones, Multipoint Connection",
+    category: "Electronics",
+    quantity: 15,
+    image: "<img class='card-img-top' src='./photos/soundCore.jpg' alt='Card image cap'>",
+    rating: 4,
+    price: "$154.79"
+},
+{
+    name: "Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones - Apple W1 Headphone Chip, Class 1 Bluetooth, 22 Hours of Listening Time, Built-in Microphone - Matte Black (Latest Model)",
+    category: "Electronics",
+    quantity: 8,
+    image: "<img class='card-img-top' src='./photos/beats.jpg' alt='Card image cap'>",
+    rating: 4,
+    price: "$259.79"
+},
+{
+    name: "Apple AirPods Pro ",
+    category: "Electronics",
+    quantity: 7,
+    image: "<img class='card-img-top' src='./photos/airpods.jpg' alt='Card image cap'>",
+    rating: 5,
+    price: "$200.79"
+},
+{
+    name: "Apple Iphone X, 256GB, Space Gray - Fully Unlocked (Renewed)",
+    category: "Electronics",
+    quantity: 20,
+    image: "<img class='card-img-top' src='./photos/iphone.jpg' alt='Card image cap'>",
+    rating: 4,
+    price: "$697.79"
+},
+{
+    name: "Insignia 42-inch Class F20 Series Smart Full HD 1080p Fire TV (NS-42F201NA22, 2021 Model)",
+    category: "Electronics",
+    quantity: 30,
+    image: "<img class='card-img-top' src='./photos/tv.jpg' alt='Card image cap'>",
+    rating: 5,
+    price: "$435.79"
+},
+]
