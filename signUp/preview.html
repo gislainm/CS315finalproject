@@ -19,9 +19,20 @@
             margin-top: 0px;
         }
 
+        .upborder>img {
+            width: 25%;
+            height: auto;
+            object-fit: cover;
+        }
+
         .upborder {
-            border: solid orange 4px;
+            border-bottom: solid orange 8px;
             width: 30%;
+            margin-top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 1%;
         }
 
         .edit {
@@ -78,7 +89,9 @@
 </head>
 
 <body>
-    <div class="container mt-5 upborder"></div>
+    <div class="container mt-5 upborder">
+        <img src="../photos/amazonLogo.png" />
+    </div>
     <div name="preview" class="container wrapper p-4">
         <p name="first">FirstName:null</p>
         <p name="last">LastName: null</p>

@@ -11,222 +11,49 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
-    <style>
-        .wrapper {
-            border: solid 2px #e9ecef;
-            width: 30%;
-            border-top: 0px;
-            margin-top: 0px;
-        }
-
-        .upborder {
-            border: solid orange 4px;
-            width: 30%;
-        }
-
-        .login {
-            justify-content: center;
-        }
-
-        .loginBtn {
-            color: white;
-            background-color: orange;
-            font-size: 0.9rem;
-        }
-
-        .form-check {
-            margin-bottom: 2%;
-        }
-
-        img {
-            width: 20px;
-            height: 20px;
-        }
-
-        .profilePicture {
-            justify-content: center;
-        }
-
-        .profile {
-            width: 30%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        .signUpBtn {
-            border: solid 1px rgb(17, 17, 17);
-            border-radius: 5px;
-
-        }
-
-        .create {
-            font-weight: normal;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 13px;
-        }
-
-        .wrapper2 {
-            border: solid 2px rgb(237, 174, 57);
-            width: 30%;
-        }
-
-        h5 {
-            text-align: center;
-            color: #767676;
-            font-size: 12px;
-            font-weight: normal;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .page {
-            background-color: #202126;
-            padding: 1%;
-            margin-top: 5%;
-        }
-
-        .footerdiv {
-            padding: 1%;
-            display: grid;
-            grid-template-rows: 1fr 0fr 0fr;
-            grid-gap: 1%;
-            background-color: #202126;
-        }
-
-        .body {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            background-color: #202126;
-            padding: 1%;
-            justify-content: space-between;
-            font-family: "Source Serif Pro", serif;
-        }
-
-        .divider {
-            border: solid #888 1px;
-        }
-
-        .box {
-            color: #888;
-            padding: 3%;
-        }
-
-        .instagram {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            row-gap: 2%;
-            column-gap: 2%;
-        }
-
-        .instagram>div>img {
-            width: 200px;
-            height: 100px;
-        }
-
-        .footer {
-            display: flex;
-            justify-content: space-between;
-            padding: 1% 5% 1%;
-            color: white;
-        }
-
-        .footerContent {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1.5fr 1.4fr 1fr 1fr;
-            gap: 1%;
-            list-style-type: none;
-            color: #fff;
-            font-family: "Poppins", sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-        }
-
-        .tweets>li {
-            list-style-image: url("./photos/twitter-16.ico");
-            padding-left: 0px;
-            margin-left: 0px;
-            padding-bottom: 6%;
-        }
-
-        .tweets {
-            padding-left: 7%;
-        }
-
-        .logo {
-            margin: 1%;
-            color: #fff;
-            font-size: 20px;
-            font-family: "Poppins", sans-serif;
-        }
-
-        .sec1 {
-            font-size: 16px;
-        }
-
-        .sec2 {
-            font-family: "Source Serif Pro", serif;
-            font-style: italic;
-            font-size: 15px;
-        }
-
-        p>img {
-            width: 12px;
-            height: 12px;
-        }
-
-        .phone,
-        .envelope {
-            font-size: 16px;
-            color: #fff;
-        }
-
-        .search {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            border-radius: 20px
-        }
-
-        .search>input[type="text"] {
-            padding: 3%;
-            grid-column: 1/3;
-            grid-row: 1/2;
-            border-radius: 30px;
-            background-color: #292b31;
-            color: #fff;
-            border: none;
-        }
-
-        input[type="button"] {
-            border-radius: 30px;
-            grid-column: 2/3;
-            grid-row: 1/2;
-            background-color: #f88020;
-            font-weight: bold;
-            border: 1px solid transparent;
-            color: #fff;
-
-        }
-
-        h3 {
-            font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            font-size: 20px;
-            color: #fff;
-            font-weight: 500;
-            font-style: normal;
-        }
-    </style>
     <script>
-        window.onload = function () {
-        }
+        (function () {
+            'use strict'
+            window.addEventListener('load', function () {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.entries().length == 0) {
+                    return;
+                } else {
+                    document.getElementsByName("email")[0].value = urlParams.get("email");
+                    document.getElementsByName("password")[0].value = urlParams.get("password");
+                }
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                let password = document.getElementsByName("password")[0];
+                let email = document.getElementsByName("email")[0];
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            }, false);
+        })()
         function signUp() {
             window.location.href = "./signUp/formAssignment.html";
-            console.log("button works")
         }
     </script>
+
+    <link rel="stylesheet" href="./login.css">
 </head>
 
 <body>
-    <div class="container mt-5 upborder"></div>
-    <form class="container wrapper p-4 needs-validation" method="get" action="./preview.html" novalidate>
+    <div class="container mt-5 upborder">
+        <img src="./photos/amazonLogo.png"/>
+    </div>
+    <form class="container wrapper p-4 needs-validation" method="get" action="./signUp/thank.html" novalidate>
         <div class="row profilePicture mb-3">
             <img src="./photos/profile.png" class="profile" />
         </div>
@@ -260,7 +87,7 @@
             <button class="btn btn-warning loginBtn" type="submit">Login</button>
         </div>
     </form>
-    <div class="container wrapper2 mt-1 p-2 signUp">
+    <div class="container wrapper2 mt-2 p-2 signUp">
         <div>
             <h5>New to Amazon?</h5>
         </div>
