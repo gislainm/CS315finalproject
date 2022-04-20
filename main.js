@@ -6,7 +6,7 @@ const productsArr = [
         category: "Books",
         quantity: 3,
         image: "<img class='card-img-top' src='./photos/sapiens.jpeg' alt='Card image cap'>",
-        rating: 5,
+        rating:"<img class='card-img-top' src='./Category-images/rating.png' alt='Card image cap'>",
         price: "$18.49"
     },
     {
@@ -14,7 +14,7 @@ const productsArr = [
         category: "Books",
         quantity: 2,
         image: "<img class='card-img-top' src='./photos/storyGenius.jpg' alt='Card image cap'>",
-        rating: 4,
+        rating: "<img class='card-img-top' src='./Category-images/rating.png' alt='Card image cap'>",
         price: "$13.79"
     },
     {
@@ -22,7 +22,7 @@ const productsArr = [
         category: "Books",
         quantity: 4,
         image: "<img class='card-img-top' src='./photos/aBriefHistory.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating:"<img class='card-img-top' src='./Category-images/rating.png' alt='Card image cap'>",
         price: "$15.44"
     },
     {
@@ -30,7 +30,7 @@ const productsArr = [
         category: "Books",
         quantity: 5,
         image: "<img class='card-img-top' src='./photos/theShining.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating:"<img class='card-img-top' src='./Category-images/rating.png' alt='Card image cap'>",
         price: "$11.49"
     },
     {
@@ -38,7 +38,7 @@ const productsArr = [
         category: "Books",
         quantity: 10,
         image: "<img class='card-img-top' src='./photos/dube.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating: "<img class='card-img-top' src='./Category-images/rating.png' alt='Card image cap'>",
         price: "$20.79"
     },
     {
@@ -46,7 +46,7 @@ const productsArr = [
         category: "Electronics",
         quantity: 15,
         image: "<img class='card-img-top' src='./photos/soundCore.jpg' alt='Card image cap'>",
-        rating: 4,
+        rating:"<img class='card-img-top' src='./Category-images/rating.png' alt='Card image cap'>",
         price: "$154.79"
     },
     {
@@ -54,7 +54,7 @@ const productsArr = [
         category: "Electronics",
         quantity: 8,
         image: "<img class='card-img-top' src='./photos/beats.jpg' alt='Card image cap'>",
-        rating: 4,
+        rating:"<img class='card-img-top' src='./Category-images/rating.png' alt='Card image cap'>",
         price: "$259.79"
     },
     {
@@ -70,7 +70,7 @@ const productsArr = [
         category: "Electronics",
         quantity: 20,
         image: "<img class='card-img-top' src='./photos/iphone.jpg' alt='Card image cap'>",
-        rating: 4,
+        rating:"<img class='card-img-top' src='./Category-images/rating.png' alt='Card image cap'>",
         price: "$697.79"
     },
     {
@@ -78,40 +78,8 @@ const productsArr = [
         category: "Electronics",
         quantity: 30,
         image: "<img class='card-img-top' src='./photos/tv.jpg' alt='Card image cap'>",
-        rating: 5,
+        rating:"<img class='card-img-top' src='./Category-images/rating.png' alt='Card image cap'>",
         price: "$435.79"
-    },
-    {
-        name: "Christopher Knight Home Idalia Dining Chairs, 2-Pcs Set, Mint / Walnut Finish",
-        category: "Home Decor",
-        quantity: 23,
-        image: "<img class='card-img-top' src='./photos/home1.jpg' alt='Card image cap'>",
-        rating: 4,
-        price: "$240.79"
-    },
-    {
-        name: "Der Rose 3 Pack Mini Potted Fake Plants Artificial Plastic Eucalyptus Plants for Home Office Desk Room Decoration",
-        category: "Home Decor",
-        quantity: 13,
-        image: "<img class='card-img-top' src='./photos/home2.jpg' alt='Card image cap'>",
-        rating: 3,
-        price: "$40.79"
-    },
-    {
-        name: "Lush Decor Curtains Dolores Darkening Window Panel Set for Living, Dining Room, Bedroom (Pair), 84 in x 52 in, Yellow, 2 Count",
-        category: "Home Decor",
-        quantity: 33,
-        image: "<img class='card-img-top' src='./photos/home3.jpg' alt='Card image cap'>",
-        rating: 5,
-        price: "$140.79"
-    },
-    {
-        name: "Stonebriar SB-5393C 2PC Wire METAL CLOCHE SET, Set of 2, Brown",
-        category: "Home Decor",
-        quantity: 13,
-        image: "<img class='card-img-top' src='./photos/home5.jpg' alt='Card image cap'>",
-        rating: 5,
-        price: "$59.79"
     }
 ]
 window.onload = function () {
@@ -121,7 +89,7 @@ window.onload = function () {
         let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
             "<div class='card-body'>" +
             "<h5 class='card-title'>" + element.category + "</h5>" +
-            "<p class='card-text'>" + element.name + "</p>" +
+            "<p class='card-text'>" + element.name + "</p>" +element.rating+
             "<p><b>" + element.price + "</b></p>" +
             "</div>" +
             "</div>";
