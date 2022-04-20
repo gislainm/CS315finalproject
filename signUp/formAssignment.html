@@ -19,9 +19,20 @@
             margin-top: 0px;
         }
 
+        .upborder>img {
+            width: 25%;
+            height: auto;
+            object-fit: cover;
+        }
+
         .upborder {
-            border: solid orange 4px;
+            border-bottom: solid orange 8px;
             width: 30%;
+            margin-top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 1%;
         }
 
         .formTitle {
@@ -126,10 +137,12 @@
 </head>
 
 <body>
-    <div class="container mt-5 upborder"></div>
+    <div class="container mt-5 upborder">
+        <img src="../photos/amazonLogo.png" />
+    </div>
     <form class="container wrapper p-4 needs-validation" method="get" action="./preview.html" novalidate>
         <div class="row formTitle">
-            <h1>Responsive Registration Form</h1>
+            <h1>Create Account</h1>
         </div>
         <div class="row">
             <div class="input-group mb-3">
