@@ -17,18 +17,41 @@
             width: 30%;
             border-top: 0px;
             margin-top: 0px;
+            text-align: center;
+        }
+
+        .upborder>img {
+            width: 25%;
+            height: auto;
+            object-fit: cover;
         }
 
         .upborder {
-            border: solid orange 4px;
+            border-bottom: solid orange 8px;
             width: 30%;
+            margin-top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 1%;
+        }
+
+        .page {
+            background-color: #202126;
+            padding: 1%;
+            margin-top: 5%;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     </style>
     <link rel="stylesheet" href="../footer.css">
 </head>
 
 <body>
-    <div class="container mt-5 upborder"></div>
+    <div class="container mt-5 upborder">
+        <img src="../photos/amazonLogo.png" />
+    </div>
     <div class="container wrapper p-4">
         <h1>THANK YOU!</h1>
     </div>
