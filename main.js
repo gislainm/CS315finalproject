@@ -6,6 +6,7 @@ const productsArr = [
         category: "Books",
         quantity: 3,
         image: "<img class='card-img-top' src='./photos/sapiens.jpeg' alt='Card image cap'>",
+
         rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
         price: "$18.49"
     },
@@ -152,7 +153,7 @@ const productsArr = [
         image: "<img class='card-img-top' src='./photos/clothes5.jpg' alt='Card image cap'>",
         rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
         price: "$19.95"
-    },
+    }
 ]
 window.onload = function () {
     let productsList = document.getElementsByClassName("myflex")[0];
@@ -168,12 +169,3 @@ window.onload = function () {
         productsList.innerHTML += productCard;
     }
 }
-
-    // < div class="card border-3" style = "width: 18rem;" >
-    //     <img class="card-img-top" src="img/carousel6.jpg" alt="Card image cap">
-    //         <div class="card-body">
-    //             <h5 class="card-title">Pumpers</h5>
-    //             <p class="card-text">So tight and smooth on body.Parental && always Dry.Best Prices in town</p>
-    //             <p>$<b>35.</b>99</p>
-    //         </div>
-    //     </div>
