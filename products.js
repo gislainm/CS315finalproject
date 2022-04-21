@@ -153,4 +153,4 @@ const productsArr = [
         image: "<img class='card-img-top' src='./photos/clothes5.jpg' alt='Card image cap'>",
         rating: "<img src='./photos/rating5.png' alt='Card image cap'>",
         price: "$19.95"
-    },
+    }];
