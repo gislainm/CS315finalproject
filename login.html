@@ -36,13 +36,24 @@
                                 event.preventDefault()
                                 event.stopPropagation()
                             }
-                            form.classList.add('was-validated')
+                            form.classList.add('was-validated');
                         }, false)
                     })
             }, false);
         })()
         function signUp() {
             window.location.href = "./signUp/formAssignment.html";
+        }
+        function login() {
+            let managers = ["gmuhikira2@gmail.com", "tuhairweronnie@gmail.com", "spaval@miu.edu", "tekletsadikyigzaw@gmail.com"]
+            let email = document.getElementsByName("email")[0].value;
+            console.log(email);
+            console.log(managers);
+            for (let element of managers) {
+                if (element == email) {
+                    window.location.href = "./managerInventory/invetory.html"
+                }
+            }
         }
     </script>
 
@@ -51,9 +62,9 @@
 
 <body>
     <div class="container mt-5 upborder">
-        <img src="./photos/amazonLogo.png"/>
+        <img src="./photos/amazonLogo.png" />
     </div>
-    <form class="container wrapper p-4 needs-validation" method="get" action="./signUp/thank.html" novalidate>
+    <form class="container wrapper p-4 needs-validation" method="get" action="./category.html" novalidate>
         <div class="row profilePicture mb-3">
             <img src="./photos/profile.png" class="profile" />
         </div>
@@ -84,7 +95,7 @@
             </div>
         </div>
         <div class="d-grid col-3 mx-auto login">
-            <button class="btn btn-warning loginBtn" type="submit">Login</button>
+            <button class="btn btn-warning loginBtn" type="submit" onclick="login()">Login</button>
         </div>
     </form>
     <div class="container wrapper2 mt-2 p-2 signUp">

@@ -1,6 +1,5 @@
 "use strict";
 /*eslint-disable */
-
 const productsArr = [
     {
         name: "Sapiens: A Brief History of Humankind Audible Audiobook – Unabridged Yuval Noah Harari(Author), Derek Perkins(Narrator), HarperAudio(Publisher)",
@@ -193,3 +192,181 @@ const productsArr = [
         id: 'clothing5'
     }
 ]
+let catPage;
+window.onload = function () {
+    catPage = document.getElementsByClassName("myflex2")[0];
+    // let catProducts = productsArr.filter((item) => item.category == "Books");
+    for (let element of productsArr) {
+        let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+            "<div class='card-body'>" +
+            "<h5 class='card-title'>" + element.category + "</h5>" +
+            "<p class='card-text' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
+            "<p><b>" + "$" + element.price + "</b></p>" +
+            "</div>" +
+            "</div>";
+        catPage.innerHTML += productCard;
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+}
+
+function changePage(obj) {
+    catPage.innerHTML = "";
+    if (obj.innerHTML == "Books") {
+        let catProducts = productsArr.filter((item) => item.category == "Books");
+        for (let element of catProducts) {
+            let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+                "<div class='card-body'>" +
+                "<h5 class='card-title'>" + element.category + "</h5>" +
+                "<p class='card-text' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
+                "<p><b>" + "$" + element.price + "</b></p>" +
+                "</div>" +
+                "</div>";
+            catPage.innerHTML += productCard;
+        }
+    } else if (obj.innerHTML == "Electronics") {
+        let catProducts = productsArr.filter((item) => item.category == "Electronics");
+        for (let element of catProducts) {
+            let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+                "<div class='card-body'>" +
+                "<h5 class='card-title'>" + element.category + "</h5>" +
+                "<p class='card-text' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
+                "<p><b>" + "$" + element.price + "</b></p>" +
+                "</div>" +
+                "</div>";
+            catPage.innerHTML += productCard;
+        }
+    } else if (obj.innerHTML == "Clothing") {
+        let catProducts = productsArr.filter((item) => item.category == "Clothing");
+        for (let element of catProducts) {
+            let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+                "<div class='card-body'>" +
+                "<h5 class='card-title'>" + element.category + "</h5>" +
+                "<p class='card-text' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
+                "<p><b>" + "$" + element.price + "</b></p>" +
+                "</div>" +
+                "</div>";
+            catPage.innerHTML += productCard;
+        }
+    } else if (obj.innerHTML == "Home Decor") {
+        let catProducts = productsArr.filter((item) => item.category == "Home Decor");
+        for (let element of catProducts) {
+            let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+                "<div class='card-body'>" +
+                "<h5 class='card-title'>" + element.category + "</h5>" +
+                "<p class='card-text' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
+                "<p><b>" + "$" + element.price + "</b></p>" +
+                "</div>" +
+                "</div>";
+            catPage.innerHTML += productCard;
+        }
+    } else {
+        for (let element of productsArr) {
+            let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+                "<div class='card-body'>" +
+                "<h5 class='card-title'>" + element.category + "</h5>" +
+                "<p class='card-text' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
+                "<p><b>" + "$" + element.price + "</b></p>" +
+                "</div>" +
+                "</div>";
+            catPage.innerHTML += productCard;
+        }
+    }
+}
+function sortLow() {
+    productsArr.sort((a, b) => a.price - b.price);
+    catPage.innerHTML = "";
+    for (let element of productsArr) {
+        let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+            "<div class='card-body'>" +
+            "<h5 class='card-title'>" + element.category + "</h5>" +
+            "<p class='card-text' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
+            "<p><b>" + "$" + element.price + "</b></p>" +
+            "</div>" +
+            "</div>";
+        catPage.innerHTML += productCard;
+    }
+
+}
+
+function sortHigh() {
+    productsArr.sort((a, b) => b.price - a.price);
+    catPage.innerHTML = "";
+    for (let element of productsArr) {
+        let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+            "<div class='card-body'>" +
+            "<h5 class='card-title'>" + element.category + "</h5>" +
+            "<p class='card-text' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
+            "<p><b>" + "$" + element.price + "</b></p>" +
+            "</div>" +
+            "</div>";
+        catPage.innerHTML += productCard;
+    }
+
+}
+
+function sortRating() {
+    productsArr.sort((a, b) => b.ratingNum - a.ratingNum);
+    catPage.innerHTML = "";
+    for (let element of productsArr) {
+        let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+            "<div class='card-body'>" +
+            "<h5 class='card-title'>" + element.category + "</h5>" +
+            "<p class='card-text' name='productName' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
+            "<p><b>" + "$" + element.price + "</b></p>" +
+            "</div>" +
+            "</div>";
+        catPage.innerHTML += productCard;
+    }
+}
+
+function productPage(obj) {
+    console.log(obj.innerHTML);
+    // window.location.search = "?productName =" + obj.innerHTML;
+    window.location.href = `./productPage.html?productName=${obj.innerHTML}`;
+}
+function productPageImage(obj) {
+    console.log(obj.name);
+    window.location.href = `./productPage.html?productImage=${obj.name}`;
+}
+function searchCat(obj) {
+    let btn = document.getElementById("categoryBtn");
+    btn.innerHTML = obj.innerHTML;
+}
+
+function searchItem() {
+    let textBox = document.getElementById("searchTextBox").value;
+    let cat = document.getElementById("categoryBtn").innerHTML;
+    // console.log(cat == "Home Decor")
+    if (cat === "Books" || cat === "Electronics" || cat === "Clothing" || cat === "Home Decor") {
+        let catFound = productsArr.filter(function (item) {
+            if (item.category === cat)
+                return item;
+        });
+        newPage(catFound);
+        //console.log("I got ", catFound);
+    }
+    else if (cat == "All Products" || cat == "All") {
+        newPage(productsArr);
+    }
+}
+
+function newPage(arr) {
+    let textBox = document.getElementById("searchTextBox").value;
+    catPage.innerHTML = "";
+    for (let element of arr) {
+        if (element.name.includes(textBox)) {
+            let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+                "<div class='card-body'>" +
+                "<h5 class='card-title'>" + element.category + "</h5>" +
+                "<p class='card-text' name='productName' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
+                "<p><b>" + "$" + element.price + "</b></p>" +
+                "</div>" +
+                "</div>";
+            catPage.innerHTML += productCard;
+        }
+    }
+    if (catPage.innerHTML == "") {
+        let productCard = "<h3 style='color: red; font-size:20px;margin-left:40%;'>Sorry the item is not found</3>";
+        catPage.innerHTML += productCard;
+    }
+}

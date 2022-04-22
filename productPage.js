@@ -1,6 +1,5 @@
 "use strict";
 /*eslint-disable */
-
 const productsArr = [
     {
         name: "Sapiens: A Brief History of Humankind Audible Audiobook – Unabridged Yuval Noah Harari(Author), Derek Perkins(Narrator), HarperAudio(Publisher)",
@@ -193,3 +192,37 @@ const productsArr = [
         id: 'clothing5'
     }
 ]
+window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    let productImage = document.getElementsByClassName("pImage")[0];
+    let productDescription = document.getElementsByClassName("pDescription")[0];
+    let ProductPrice = document.getElementsByClassName("pPrice")[0];
+    let rating = document.getElementsByClassName("rating")[0];
+    let price = document.getElementsByClassName("price")[0];
+    if (urlParams.get("productName")) {
+        for (let element of productsArr) {
+            if (element.name == urlParams.get("productName")) {
+                productImage.innerHTML = element.image;
+                productDescription.innerHTML = "<b>" + element.name + "</b>"
+                ProductPrice.innerHTML = "$" + element.price;
+                rating.innerHTML = element.rating;
+                price.innerHTML = "$" + element.price;
+            }
+        }
+    } else if (urlParams.get("productImage")) {
+        for (let element of productsArr) {
+            if (element.id == urlParams.get("productImage")) {
+                productImage.innerHTML = element.image;
+                productDescription.innerHTML = "<b>" + element.name + "</b>"
+                ProductPrice.innerHTML = "$" + element.price;
+                rating.innerHTML = element.rating;
+                price.innerHTML = "$" + element.price;
+            }
+        }
+    }
+
+}
+
+function changePage(obj) {
+    window.location.href = "./category.html";
+}
