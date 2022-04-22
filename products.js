@@ -193,3 +193,4 @@ const productsArr = [
         id: 'clothing5'
     }
 ]
+

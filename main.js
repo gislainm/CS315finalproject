@@ -180,7 +180,7 @@ window.onload = function () {
     signinBtn.onclick = goToLogin;
     productsList.innerHTML = "";
     for (let element of productsArr) {
-        let productCard = "<div class='card border-3' style='width: 18rem;'>" + element.image +
+        let productCard = "<div class='card border-3' style='width: 18rem;' onclick='display1(this)' >" + element.image +
             "<div class='card-body'>" +
             "<h5 class='card-title'>" + element.category + "</h5>" +
             "<p class='card-text' onclick='productPage(this)'>" + element.name + "</p>" + element.rating +
